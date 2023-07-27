@@ -1,0 +1,49 @@
+# Laravel Installation
+composer create-project laravel/laravel example-app
+
+# node_module Installation
+npm install
+
+# Install Pusher for Pusher Channels
+composer require pusher/pusher-php-server
+
+# Upload to Git
+excute command of git
+
+# Livewire Installation
+composer require livewire/livewire
+
+# Install DomPDF
+composer require barrypvdh/laravel-dompdf
+php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
+
+# Install Toastr (by yoeunes)
+composer require yoeunes/toastr
+    # Commands
+    php artisan vendor:publish --provider="Yoeunes\Toastr\ToastrServiceProvider"
+
+# Install Laravel Backup
+composer require spatie/laravel-backup
+   # Command
+   php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
+
+# Install Laravel Activity Log
+composer require spatie/laravel-activitylog
+    # Command
+    php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProvider" --tag="activitylog-migrations"
+    php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProvider" --tag="activitylog-config"
+
+# Install PHPFlasher
+composer require php-flasher/flasher-sweetalert-laravel
+composer require php-flasher/flasher-notyf-laravel
+
+# Install Laravel IDE Helper
+composer require --dev barryvdh/laravel-ide-helper
+    # Commands
+    php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+    php artisan ide-helper:generate
+    php artisan ide-helper:models
+
+# During deployment on hosting
+npm install --save-dev vite laravel-vite-plugin
+ npm run build
