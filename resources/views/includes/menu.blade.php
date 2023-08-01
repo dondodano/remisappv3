@@ -29,128 +29,137 @@
 
         <!-- Recording -->
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">Recording</span>
+            <span class="menu-header-text">Menu</span>
         </li>
-        <li class="menu-item {{ openSide(['schema', 'worksheet', 'category', 'preliminary']) }}">
+        <li class="menu-item {{ openSide(['project']) }}">
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-folder"></i>
-                <div data-i18n="Entry">Entry</div>
+                <div data-i18n="Project Monitoring">Project Monitoring</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item {{ activeSide('schema') }}">
-                    <a href="/schema" class="menu-link">
-                        <div data-i18n="Schema">Schema</div>
+                <li class="menu-item {{ activeSide('project') }}">
+                    <a href="/project" class="menu-link">
+                        <div data-i18n="Project">Project</div>
                     </a>
                 </li>
-                {{-- <li class="menu-item {{ activeSide('worksheet') }}">
-                    <a href="/worksheet" class="menu-link">
-                        <div data-i18n="Worksheet">Worksheet</div>
-                    </a>
-                </li> --}}
 
-                @role(['super', 'admin'])
-                    <li class="menu-item {{ activeSide('category') }}">
-                        <a href="/category" class="menu-link">
-                            <div data-i18n="Category">Category</div>
-                        </a>
-                    </li>
-                    <li class="menu-item {{ activeSide('preliminary') }}">
-                        <a href="/preliminary" class="menu-link">
-                            <div data-i18n="Preliminary">Preliminary</div>
-                        </a>
-                    </li>
-                @endrole
+                <li class="menu-item {{ activeSide('lib') }}">
+                    <a href="/lib" class="menu-link">
+                        <div data-i18n="LIB">LIB</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ activeSide('ppmp') }}">
+                    <a href="/ppmp" class="menu-link">
+                        <div data-i18n="PPMP">PPMP</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ activeSide('pr') }}">
+                    <a href="/pr" class="menu-link">
+                        <div data-i18n="PR">PR</div>
+                    </a>
+                </li>
+
+                <li class="menu-item {{ activeSide('activity') }}">
+                    <a href="/activity" class="menu-link">
+                        <div data-i18n="Activity">Activity</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ activeSide('travel') }}">
+                    <a href="/travel" class="menu-link">
+                        <div data-i18n="Travel">Travel</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ activeSide('report') }}">
+                    <a href="/report" class="menu-link">
+                        <div data-i18n="Report">Report</div>
+                    </a>
+                </li>
             </ul>
         </li>
 
-        @role(['super', 'admin'])
-            <!-- User -->
-            <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">User</span>
-            </li>
-            <li class="menu-item {{ activeSide('user') }}">
-                <a href="/user" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-user"></i>
-                    <div data-i18n="User">User</div>
-                </a>
-            </li>
-        @endrole
 
-        @role(['super', 'admin'])
-            <!-- Logs -->
-            <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">History</span>
-            </li>
-            <li class="menu-item {{ openSide(['logs']) }}">
-                <a href="javascript:void(0)" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-history"></i>
-                    <div data-i18n="Logs">Logs</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item {{ activeSide('logs') }}">
-                        <a href="/logs/activity" class="menu-link">
-                            <div data-i18n="Activity log">Activity log</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        @endrole
+        <!-- User -->
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">User</span>
+        </li>
+        <li class="menu-item {{ activeSide('user') }}">
+            <a href="/user" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="User">User</div>
+            </a>
+        </li>
 
 
-        @role(['super', 'admin'])
-            <li class="menu-header small text-uppercase">
-                <span class="menu-header-text">System</span>
-            </li>
-
-            <li class="menu-item {{ openSide(['setting','general', 'webicon']) }}">
-                <a href="javascript:void(0)" class="menu-link menu-toggle">
-                    <i class="menu-icon tf-icons bx bx-cog"></i>
-                    <div data-i18n="Setting">Setting</div>
-                </a>
-                <ul class="menu-sub">
-                    <li class="menu-item {{ activeSide('general') }}">
-                        <a href="/setting/general" class="menu-link">
-                            <div data-i18n="General">General</div>
-                        </a>
-                    </li>
-                    <li class="menu-item {{ activeSide('webicon') }}">
-                        <a href="/setting/webicon" class="menu-link">
-                            <div data-i18n="Web Icon">Web Icon</div>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            @role(['super'])
-                <li class="menu-item {{ activeSide('backup') }}">
-                    <a href="/backup" class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-hdd"></i>
-                        <div data-i18n="Backup">Backup</div>
+        <!-- Logs -->
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">History</span>
+        </li>
+        <li class="menu-item {{ openSide(['logs']) }}">
+            <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-history"></i>
+                <div data-i18n="Logs">Logs</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ activeSide('logs') }}">
+                    <a href="/logs/activity" class="menu-link">
+                        <div data-i18n="Activity log">Activity log</div>
                     </a>
                 </li>
+            </ul>
+        </li>
 
-                <li class="menu-item {{ activeSide('maintenance') }}">
-                    <a href="/maintenance" class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-chip"></i>
-                        <div data-i18n="Maintenance">Maintenance</div>
+
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">System</span>
+        </li>
+
+        <li class="menu-item {{ openSide(['setting','general', 'webicon']) }}">
+            <a href="javascript:void(0)" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-cog"></i>
+                <div data-i18n="Setting">Setting</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ activeSide('general') }}">
+                    <a href="/setting/general" class="menu-link">
+                        <div data-i18n="General">General</div>
                     </a>
                 </li>
-                @endrole
-        @endrole
+                <li class="menu-item {{ activeSide('webicon') }}">
+                    <a href="/setting/webicon" class="menu-link">
+                        <div data-i18n="Web Icon">Web Icon</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="menu-item {{ activeSide('backup') }}">
+            <a href="/backup" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-hdd"></i>
+                <div data-i18n="Backup">Backup</div>
+            </a>
+        </li>
 
-        @role(['user'])
-            <li class="menu-item {{ activeSide('profile') }}">
-                <a href="/my/profile" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-user"></i>
-                    <div data-i18n="My Profile">My Profile</div>
-                </a>
-            </li>
-            <li class="menu-item {{ activeSide('password') }}">
-                <a href="/my/password" class="menu-link">
-                    <i class="menu-icon tf-icons bx bx-lock-alt"></i>
-                    <div data-i18n="My Password">My Password</div>
-                </a>
-            </li>
-        @endrole
+        <li class="menu-item {{ activeSide('maintenance') }}">
+            <a href="/maintenance" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-chip"></i>
+                <div data-i18n="Maintenance">Maintenance</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ activeSide('profile') }}">
+            <a href="/my/profile" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="My Profile">My Profile</div>
+            </a>
+        </li>
+        <li class="menu-item {{ activeSide('password') }}">
+            <a href="/my/password" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-alt"></i>
+                <div data-i18n="My Password">My Password</div>
+            </a>
+        </li>
     </ul>
 </aside>
 
