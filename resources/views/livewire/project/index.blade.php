@@ -65,4 +65,9 @@
         </div>
 
     </div>
+
+    <button class="btn btn-primary btn-lg" type="button" wire:click.prevent="$emit('showModal', 'HelloWorld')">Open Modal</button>
+
+    @livewire('modal.master')
+
 </div>
