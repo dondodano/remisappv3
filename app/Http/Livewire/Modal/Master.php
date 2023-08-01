@@ -9,16 +9,20 @@ class Master extends Component
     public $data;
     public $show;
 
-    protected $listeners = ['showModal' => 'showModal'];
+    public $modalTitle;
+    public $modalSubTitle;
+    public $modalContent;
 
-    public function mount($data = null)
+    protected $listeners = [
+        'showModal' => 'showModal',
+    ];
+
+    public function mount()
     {
-        $this->data = $data;
         $this->show = false;
     }
 
-    public function showModal($data) {
-        $this->data = $data;
+    public function showModal() {
         $this->doShow();
     }
 
