@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', Project\Index::class );
-Route::get('/project', Project\Index::class );
 
-Route::get('/project/attachment', Attachment\Index::class );
+Route::prefix('/project')->middleware(['guest'])->group(function(){
+    Route::get('/', Project\Index::class );
+    Route::get('/create', Project\Create::class );
+
+    Route::get('/attachment', Attachment\Index::class );
+});

@@ -15,6 +15,7 @@
                     <thead class="table-light">
                         <tr>
                             <th>File</th>
+                            <th>Size</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -22,10 +23,8 @@
 
                         <tr>
                             <td>RAISE Memorandum of Agreement.pdf</td>
+                            <td>2.15MB</td>
                             <td>
-                                <a href="/project/edit/1" class="btn btn-sm btn-icon" title="Edit">
-                                    <i class='bx bx-edit'></i>
-                                </a>
                                 <button class="btn btn-sm btn-icon" title="Delete" type="button">
                                     <i class='bx bx-trash'></i>
                                 </button>

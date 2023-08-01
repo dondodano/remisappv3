@@ -29,7 +29,7 @@
                             <td>RAISE UGMARA</td>
                             <td>Ariel E. San Jose</td>
                             <td>January 1, 2022 - December 31, 2023</td>
-                            <td>Completed</td>
+                            <td><span class="badge bg-label-success">Completed</span></td>
                             <td>
                                 <a href="/project/edit/1" class="btn btn-sm btn-icon" title="Edit">
                                     <i class='bx bx-edit'></i>
@@ -44,7 +44,10 @@
                                     <a href="javascript:;" class="dropdown-item">Completed</a>
                                     <a href="javascript:;" class="dropdown-item">Occurring</a>
                                     <div class="dropdown-divider"></div>
+                                    <a href="/project/attachment/" class="dropdown-item">View full details</a>
+                                    <div class="dropdown-divider"></div>
                                     <a href="/project/attachment/" class="dropdown-item">Add attachment</a>
+                                    <a href="/project/attachment/" class="dropdown-item">View attachment</a>
                                 </div>
                             </td>
                         </tr>
